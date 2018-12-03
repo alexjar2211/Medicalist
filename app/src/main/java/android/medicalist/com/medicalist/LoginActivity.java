@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
-        // Comentario sasd
+        /* COmentario editado x2  */
 
         /*SharedPreferences pref = getPreferences(Context.MODE_PRIVATE);
         if(pref.getBoolean(LOGIN_KEY, false)){
