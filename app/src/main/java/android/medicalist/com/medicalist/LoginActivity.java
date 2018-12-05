@@ -23,7 +23,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
         /* COmentario editado x2  */
-        // Esta rama esta creada en la parte de testing
 
         /*SharedPreferences pref = getPreferences(Context.MODE_PRIVATE);
         if(pref.getBoolean(LOGIN_KEY, false)){
