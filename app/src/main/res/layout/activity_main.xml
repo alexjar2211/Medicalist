@@ -88,4 +88,16 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button_agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <LinearLayout
+        android:id="@+id/layout_contenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
 </LinearLayout>
