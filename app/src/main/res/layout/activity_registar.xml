@@ -207,7 +207,7 @@
                 android:layout_width="155dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/ic_my_button"
                 android:text="Guardar"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white" />
