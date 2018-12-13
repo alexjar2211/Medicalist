@@ -7,4 +7,30 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="centro_medico">
+        <item>Centro Medico</item>
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+    </string-array>
+
+    <string-array name="especialidad">
+        <item>Especialidad</item>
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+    </string-array>
+
+    <string-array name="doctor">
+        <item>Doctor</item>
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+    </string-array>
+
+    <string-array name="generos">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
 </resources>

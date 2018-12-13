@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -40,6 +42,16 @@ public class LoginActivity extends AppCompatActivity {
                 login();
             }
         });
+
+        TextView mRegistarButton =  findViewById(R.id.btnRegistrarse);
+        mRegistarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegistarActivity.class);
+                LoginActivity.this.startActivity(intent);
+
+            }
+        });
 /*
         this.mEmailView = findViewById(R.id.correo);
         this.mPasswordView = findViewById(R.id.contraseña);
@@ -58,4 +70,10 @@ public class LoginActivity extends AppCompatActivity {
         LoginActivity.this.startActivity(intent);
         finish();
     }
+
+
+
+
+
+
 }

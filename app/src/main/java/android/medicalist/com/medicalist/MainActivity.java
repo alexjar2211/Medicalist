@@ -13,54 +13,43 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    onChangeFragment(new HomeFragment());
-                    return true;
-                case R.id.navigation_citas:
-                    onChangeFragment(new CitasFragment());
-                    return true;
-                case R.id.navigation_medicamentos:
-                    onChangeFragment(new MedicamentosFragment());
-                    return true;
-                case R.id.navigation_calendario:
-                    onChangeFragment(new CalendarFragment());
-                    return true;
-            }
-            return false;
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //getSupportActionBar().hide();
+
+
+        BottomNavigationView navigationView = findViewById(R.id.navigation);
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_home:
+                        onChangeFragment(new HomeFragment());
+                        return true;
+                    case R.id.navigation_citas:
+                        onChangeFragment(new CitasFragment());
+                        return true;
+                    case R.id.navigation_medicamentos:
+                        onChangeFragment(new MedicamentosFragment());
+                        return true;
+                    case R.id.navigation_calendario:
+                        onChangeFragment(new CalendarFragment());
+                        return true;
+                }
+                return false;
+            }
+        });
+
         this.onChangeFragment(new HomeFragment());
 
-
-
-
-        /*BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);*/
-
-        /* Button btn = findViewById(R.id.button_agregar);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addTextView(v);
-            }
-        }); */
     }
 
     private void onChangeFragment(Fragment fragment){
